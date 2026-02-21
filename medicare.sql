@@ -1,5 +1,7 @@
 -- Medicare Database
 
+DROP DATABASE IF EXISTS medicare;
+
 CREATE DATABASE medicare;
 USE medicare;
 
@@ -66,6 +68,48 @@ CREATE TABLE health_records (
         REFERENCES patients(patient_id)
         ON DELETE CASCADE
 );
+
+
+
+-- SAMPLE PATIENT
+INSERT INTO patients (name,email,password,phone)
+VALUES ('Ram Sharma','ram@test.com','123','9800000000');
+
+
+INSERT INTO patients (name,email,password,phone)
+VALUES ('Sita Rai','sita@test.com','123','9811111111');
+
+
+-- SAMPLE DOCTOR
+INSERT INTO doctors (name,specialization,email)
+VALUES ('Dr. Sita Karki','Cardiology','sita@test.com');
+
+INSERT INTO doctors (name,specialization,email)
+VALUES ('Dr. Ram Adhikari','Dermatology','ramdoc@test.com');
+
+-- SAMPLE APPOINTMENT
+INSERT INTO appointments (patient_id,doctor_id,appointment_date)
+VALUES (1,1,'2026-03-10 10:00:00');
+
+
+-- GET ALL DOCTORS
+SELECT * FROM doctors;
+
+-- SEARCH DOCTOR BY SPECIALIZATION
+SELECT * FROM doctors
+WHERE specialization LIKE '%Cardio%';
+
+-- VIEW APPOINTMENTS
+SELECT p.name AS patient, d.name AS doctor, a.appointment_date, a.status
+FROM appointments a
+JOIN patients p ON a.patient_id = p.patient_id
+JOIN doctors d ON a.doctor_id = d.doctor_id;
+
+-- PRESCRIPTIONS LIST
+SELECT p.name, pr.medicines
+FROM prescriptions pr
+JOIN appointments a ON pr.appointment_id = a.appointment_id
+JOIN patients p ON a.patient_id = p.patient_id;
 
 
 
