@@ -1,5 +1,4 @@
 -- Medicare Database
--- SYB / SYP Project
 
 CREATE DATABASE medicare;
 USE medicare;
