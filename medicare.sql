@@ -30,7 +30,7 @@ CREATE TABLE appointments (
     patient_id INT NOT NULL,
     doctor_id INT NOT NULL,
     appointment_date DATETIME NOT NULL,
-    status VARCHAR(50) DEFAULT 'scheduled',
+    status ENUM('scheduled','completed','cancelled') DEFAULT 'scheduled',
 
     FOREIGN KEY (patient_id)
         REFERENCES patients(patient_id)
