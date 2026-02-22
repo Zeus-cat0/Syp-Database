@@ -111,5 +111,6 @@ FROM prescriptions pr
 JOIN appointments a ON pr.appointment_id = a.appointment_id
 JOIN patients p ON a.patient_id = p.patient_id;
 
+z
 
 
