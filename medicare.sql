@@ -94,15 +94,15 @@ INSERT INTO prescriptions VALUES (2,2,'Skin cream','Apply daily',CURRENT_TIMESTA
 INSERT INTO health_records VALUES (1,1,'Fever','Rest and medication',DATE '2026-02-10');
 INSERT INTO health_records VALUES (2,2,'Skin allergy','Antihistamine',DATE '2026-02-12');
 
+-- Show tables
+SELECT table_name FROM user_tables;
 
--- GET ALL DOCTORS
+-- Show data
+SELECT * FROM patients;
 SELECT * FROM doctors;
-
-
--- SEARCH DOCTOR BY SPECIALIZATION
-SELECT * FROM doctors
-WHERE specialization LIKE '%Cardio%';
-
+SELECT * FROM appointments;
+SELECT * FROM prescriptions;
+SELECT * FROM health_records;
 
 -- VIEW APPOINTMENTS
 SELECT 
