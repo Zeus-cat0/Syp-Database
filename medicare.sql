@@ -1,10 +1,7 @@
 -- Medicare Database using SQL*Plus
-
 CREATE USER medicare IDENTIFIED BY 1234;
+CONNECT medicare/1234
 
-GRANT CONNECT, RESOURCE TO medicare;
-
-ALTER USER medicare QUOTA UNLIMITED ON USERS;
 
 -- PATIENT TABLE
 CREATE TABLE patients (
