@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: hsl(140, 20%, 97%);
+  --fg: hsl(160, 30%, 10%);
+  --card: hsl(140, 15%, 99%);
+  --primary: hsl(158, 64%, 32%);
+  --primary-fg: hsl(0, 0%, 100%);
+  --secondary: hsl(152, 30%, 92%);
+  --muted: hsl(160, 10%, 45%);
+  --accent: hsl(168, 50%, 88%);
+  --border: hsl(150, 20%, 88%);
+  --hero-gradient: linear-gradient(
+    135deg,
+    hsl(158, 64%, 32%),
+    hsl(168, 55%, 40%),
+    hsl(145, 50%, 42%)
+  );
+  --glow: 0 8px 32px -8px hsla(158, 64%, 32%, 0.25);
+  --radius: 0.75rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+  opacity: 0.95;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 8rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 800;
+  color: var(--primary-fg);
+}
+
+.hero p {
+  font-size: 1.125rem;
+  color: hsla(0, 0%, 100%, 0.8);
+}
+
+/* Stats */
+.stats {
+  max-width: 72rem;
+  margin: -2rem auto 0;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--glow);
+}
+
+/* Footer */
+.footer {
+  background: var(--fg);
+  padding: 3rem 1.5rem;
+}
+
+.footer-copy {
+  color: hsla(0, 0%, 100%, 0.4);
+}
