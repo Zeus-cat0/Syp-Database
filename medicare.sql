@@ -2,7 +2,6 @@
 CREATE USER medicare IDENTIFIED BY 1234;
 CONNECT medicare/1234
 
-
 -- PATIENT TABLE
 CREATE TABLE patients (
     patient_id NUMBER PRIMARY KEY,
