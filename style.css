@@ -149,7 +149,7 @@ body {
   display: inline-block;   /* fit content */
   padding: 0.4rem 1rem;    /* inside space */
   border-radius: 9999px;   /* pill shape */
-  background: rgba(255, 255, 255, 0.15); /* glass bg */
+  background: rgba(255, 255, 255, 0.15); /* blur bg */
   color: white;            /* text color */
   font-size: 0.85rem;      /* small text */
   margin-bottom: 1.5rem;   /* space below */
@@ -183,249 +183,252 @@ body {
 /* STATS */
 
 .stats {
-  max-width: 72rem;
-  margin: -2rem auto 0;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  position: relative;
-  z-index: 2;
+  max-width: 72rem;              /* max width */
+  margin: -2rem auto 0;          /* move up */
+  padding: 0 1.5rem;             /* side space */
+  display: grid;                 /* grid layout */
+  grid-template-columns: 
+    repeat(auto-fit, minmax(160px, 1fr)); /* responsive columns */
+  gap: 1rem;                     /* space between */
+  position: relative;            /* relative box */
+  z-index: 2;                    /* above bg */
 }
 
 .stat-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: var(--glow);
+  background: var(--card);       /* card color */
+  border: 1px solid var(--border); /* card border */
+  border-radius: var(--radius);  /* round corners */
+  padding: 1.5rem;               /* inner space */
+  text-align: center;            /* center text */
+  box-shadow: var(--glow);       /* soft shadow */
 }
 
 .stat-card .value {
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-size: 1.7rem;             /* big number */
+  font-weight: 700;              /* bold text */
 }
 
 .stat-card .label {
-  font-size: 0.9rem;
-  color: var(--muted);
+  font-size: 0.9rem;             /* small text */
+  color: var(--muted);           /* light color */
 }
 
 /* SECTION */
 
 .section {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 5rem 1.5rem;
+  max-width: 72rem;      /* max width */
+  margin: 0 auto;        /* center section */
+  padding: 5rem 1.5rem; /* inner space */
 }
+
 .upper-section-title {
-  font-size: 1.32rem;
-  font-weight: 600;
-  margin-top: 0.75rem;
-  color: #0c6500;
+  font-size: 1.32rem;   /* text size */
+  font-weight: 600;     /* semi bold */
+  margin-top: 0.75rem;  /* top space */
+  color: #0c6500;       /* title color */
 }
+
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 0.75rem;
+  font-size: 2rem;      /* big heading */
+  font-weight: 700;     /* bold text */
+  margin-top: 0.75rem;  /* top space */
 }
 
 /* FEATURES */
 
 .features-section {
-  background: rgba(152, 184, 170, 0.2);
-  padding: 5rem 0;
+  background: rgba(152, 184, 170, 0.2); /* light background */
+  padding: 5rem 0;                     /* top bottom space */
 }
 
 .features-grid {
-  display: flex;
-  flex-direction: column;  
-  gap: 1.5rem;
-  margin-top: 3rem;
+  display: flex;                       /* flex layout */
+  flex-direction: column;              /* items vertical */
+  gap: 1.5rem;                         /* space between */
+  margin-top: 3rem;                    /* space from top */
 }
 
 .feature-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  box-shadow: var(--glow);
+  background: var(--card);             /* card color */
+  border-radius: var(--radius);         /* round corners */
+  padding: 1.5rem;                     /* inside space */
+  box-shadow: var(--glow);              /* soft shadow */
 }
 
 .feature-card h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;               /* space below title */
 }
 
 .feature-card p {
-  color: var(--muted);
-  font-size: 0.9rem;
+  color: var(--muted);                 /* light text */
+  font-size: 0.9rem;                   /* small text */
 }
 
 /* TEAM */
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  text-align: center;
+  display: grid; /* grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive columns */
+  gap: 2rem; /* space between cards */
+  margin-top: 3rem; /* space above */
+  text-align: center; /* center text */
 }
 
 /* CTA */
 
 .cta {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
+  position: relative;        /* base position */
+  overflow: hidden;          /* hide overflow */
+  text-align: center;        /* center text */
 }
 
 .cta-bg {
-  position: absolute;
-  inset: 0;
-  background: var(--hero-gradient);
+  position: absolute;        /* background layer */
+  inset: 0;                  /* full size */
+  background: var(--hero-gradient); /* gradient bg */
 }
 
 .cta-content {
-  position: relative;
-  padding: 5rem 1.5rem;
-  color: white;
+  position: relative;       /* above bg */
+  padding: 5rem 1.5rem;     /* inner space */
+  color: white;             /* white text */
 }
 
 .cta-btn {
-  margin-top: 1.5rem;
-  padding: 0.8rem 2rem;
-  border-radius: 9999px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
+  margin-top: 1.5rem;       /* space top */
+  padding: 0.8rem 2rem;     /* button size */
+  border-radius: 9999px;    /* pill shape */
+  border: none;             /* no border */
+  font-weight: 600;         /* bold text */
+  cursor: pointer;          /* hand cursor */
 }
 
 
 /* MISSION SECTION */
 
 .mission-section {
-  padding: 6rem 1.5rem;
-  background: var(--bg);
+  padding: 6rem 1.5rem;      /* space inside */
+  background: var(--bg);     /* page background */
 }
 
 .container {
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: 72rem;          /* max width */
+  margin: 0 auto;            /* center align */
 }
 
 .mission-tag {
-  color: var(--primary);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  color: var(--primary);     /* main color */
+  font-weight: 700;          /* bold text */
+  font-size: 0.85rem;        /* small text */
+  letter-spacing: 0.08em;    /* space letters */
 }
 
 .mission-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 1rem 0 1.5rem;
+  font-size: 2.5rem;         /* big heading */
+  font-weight: 800;          /* extra bold */
+  margin: 1rem 0 1.5rem;     /* top bottom gap */
 }
 
 .mission-text {
-  color: var(--muted);
-  max-width: 50rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
+  color: var(--muted);       /* light text */
+  max-width: 50rem;          /* limit width */
+  margin-bottom: 1.5rem;    /* space below */
+  line-height: 1.7;          /* line spacing */
 }
 
 .mission-box {
-  margin-top: 3rem;
-  background: rgba(152, 184, 170, 0.25);
-  padding: 2.5rem;
-  border-radius: 20px;
+  margin-top: 3rem;          /* space above */
+  background: rgba(152, 184, 170, 0.25); /* soft bg */
+  padding: 2.5rem;           /* inner space */
+  border-radius: 20px;       /* rounded box */
 }
 
 .mission-item {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
+  font-size: 1.1rem;         /* text size */
+  margin-bottom: 1.5rem;    /* gap below */
+  display: flex;             /* row layout */
+  align-items: center;       /* center items */
 }
 
 .mission-item span {
-  color: var(--primary);
-  font-weight: 700;
-  margin-right: 1.2rem;
-  font-size: 1.2rem;
+  color: var(--primary);     /* highlight color */
+  font-weight: 700;          /* bold text */
+  margin-right: 1.2rem;     /* space right */
+  font-size: 1.2rem;         /* bigger text */
 }
 
 /* TEAM SECTION */
 
 .team {
-  text-align: center;
-  padding: 4rem 1.5rem;
-  background: #f7fbf9;
+  text-align: center;          /* center all text inside the team section */
+  padding: 4rem 1.5rem;        /* space inside the section (top/bottom, left/right) */
+  background: #f7fbf9;         /* light background color for the team section */
 }
 
 .team-tag {
-  color: #2f8f6b;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  color: #2f8f6b;              /* green color for the small tag text */
+  font-weight: 600;            /* semi-bold text */
+  letter-spacing: 1px;         /* extra space between letters */
+  margin-bottom: 0.5rem;       /* space below the tag */
 }
 
 .team-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  font-size: 2rem;             /* large heading size */
+  margin-bottom: 3rem;         /* space below the title */
 }
 
 /* Cards layout */
 
 .team-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
+  display: grid; /* use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive columns */
+  gap: 1.5rem; /* space between cards */
+  max-width: 900px; /* max container width */
+  margin: 0 auto; /* center horizontally */
 }
 
 
 /* Single card */
 .team-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: white; /* card background */
+  border-radius: 12px; /* rounded corners */
+  padding: 2rem 1rem; /* inner spacing */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* soft shadow */
 }
 
 /* Icon circle */
 
 .team-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  background: #e6f4ef;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+  width: 80px; /* icon width */
+  height: 80px; /* icon height */
+  margin: 0 auto 1rem; /* center + bottom space */
+  border-radius: 50%; /* circle shape */
+  background: #e6f4ef; /* light background */
+  display: flex; /* flex layout */
+  align-items: center; /* center vertically */
+  justify-content: center; /* center horizontally */
+  font-size: 2rem; /* icon size */
 }
 
 .team-card h4 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem; /* small space below title */
 }
 
 .role {
-  color: #2f8f6b;
-  font-weight: 600;
+  color: #2f8f6b; /* role color */
+  font-weight: 600; /* semi bold */
 }
 
 .dept {
-  color: #666;
-  font-size: 0.9rem;
+  color: #666; /* grey text */
+  font-size: 0.9rem; /* small text */
 }
 
 /* FOOTER */
 
 .footer {
-  background: #0e2b23;
-  padding: 3rem 1.5rem;
-  color: white;
-  text-align: center;
+  background: #0e2b23;   /* footer color */
+  padding: 3rem 1.5rem; /* inner space */
+  color: white;         /* text color */
+  text-align: center;   /* center text */
 }
