@@ -1,176 +1,183 @@
 
 
 body {
-    margin: 0;
-    padding-top: 100px;
-    box-sizing: border-box;
+    margin: 0;              /* remove gap */
+    padding-top: 100px;     /* navbar space */
+    box-sizing: border-box; /* size control */
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 8%;
-    background: transparent;
-    backdrop-filter: blur(12px);
-    position: fixed;
-    width: 90%;
-    top: 0;
-    z-index: 1000;
+    display: flex;                  /* horizontal layout */
+    justify-content: space-between; /* left & right */
+    align-items: center;            /* vertical center */
+    padding: 25px 8%;               /* inside space */
+    background: transparent;        /* clear background */
+    backdrop-filter: blur(12px);    /* glass blur */
+    position: fixed;                /* stick top */
+    width: 90%;                     /* navbar width */
+    top: 0;                         /* top position */
+    z-index: 1000;                  /* above all */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex;          /* items in row */
+    align-items: center;    /* center vertically */
+    gap: 12px;              /* space between */
 }
 
-.logo-box {
-    width: 38px;
-    height: 38px;
-    background: #2dd4bf;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #011616;
-    font-weight: 800;
-    font-size: 20px;
+.logo-box {                  
+    width: 38px;            /* box width */
+    height: 38px;           /* box height */
+    background: #2dd4bf;    /* box color */
+    border-radius: 10px;    /* rounded corners */
+
+    display: flex;          /* flex layout */
+    align-items: center;    /* center up-down */
+    justify-content: center;/* center left-right */
+
+    color: #011616;         /* text color */
+    font-weight: 800;       /* bold text */
+    font-size: 20px;        /* text size */
 }
 
 .logo span {
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.5px;
+    font-weight: 700;        /* bold text */
+    font-size: 22px;         /* text size */
+    letter-spacing: -0.5px;  /* letters closer */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
+    list-style: none;   /* remove bullets */
+    display: flex;      /* items in row */
+    gap: 35px;          /* space between */
 }
 
 nav a {
-    text-decoration: none;
-    color: #000000; /* Muted grey from the image */
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s ease;
+    text-decoration: none;   /* remove underline */
+    color: #000000;          /* link color */
+    font-size: 15px;         /* text size */
+    font-weight: 500;        /* medium bold */
+    transition: 0.3s ease;  /* smooth hover */
 }
 
 nav a.active,
 nav a:hover {
-    color: #2dd4bf;
+    color: #2dd4bf;   /* change link color */
 }
 
 .nav-buttons {
-    display: flex;
-    align-items: center;
+    display: flex;        /* items in row */
+    align-items: center; /* vertical center */
 }
 
 .chat-btn {
-    padding: 10px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    background: #2dd4bf;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
-     color: #011616;
+    padding: 10px 24px;              /* inside space */
+    border: 1px solid rgba(255,255,255,0.15); /* thin border */
+    border-radius: 999px;            /* full round */
+    background: #2dd4bf;             /* button color */
+    text-decoration: none;           /* no underline */
+    font-size: 14px;                 /* text size */
+    font-weight: 600;                /* bold text */
+    transition: 0.3s;                /* smooth hover */
+    color: #011616;                  /* text color */
 }
 
 .account-btn {
-    padding: 10px 24px;
-    background: #2dd4bf;
-    color: #011616;
-    border-radius: 999px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 15px;
+    padding: 10px 24px;        /* space inside button */
+    background: #2dd4bf;       /* button color */
+    color: #011616;            /* text color */
+    border-radius: 999px;      /* fully round edges */
+    text-decoration: none;     /* remove underline */
+    font-size: 14px;           /* text size */
+    font-weight: 600;          /* semi bold text */
+    margin-left: 15px;         /* space from left */
 }
 
-:root {
-  --bg: hsl(140, 20%, 97%);
-  --fg: hsl(160, 30%, 10%);
-  --card: hsl(140, 15%, 99%);
-  --primary: hsl(158, 64%, 32%);
-  --primary-fg: hsl(0, 0%, 100%);
-  --secondary: hsl(152, 30%, 92%);
-  --muted: hsl(160, 10%, 45%);
-  --accent: hsl(168, 50%, 88%);
-  --border: hsl(150, 20%, 88%);
+:root {                   /* setting of entire HTML page */
+  --bg: #ffffff;              /* page background */
+  --fg: #0f172a;              /* text color */
+  --card: #ffffff;            /* card background */
+
+  --primary: #2dd4bf;         /* main color */
+  --primary-fg: #ffffff;      /* text on main */
+
+  --secondary: #ccfbf1;       /* light background */
+  --muted: #64748b;           /* dull text */
+
+  --accent: #99f6e4;          /* highlight color */
+  --border: #5eead4;          /* border color */
+
   --hero-gradient: linear-gradient(
     135deg,
-    hsl(158, 64%, 32%),
-    hsl(168, 55%, 40%),
-    hsl(145, 50%, 42%)
+    #2dd4bf,                  /* top color */
+    #14b8a6,                  /* middle color */
+    #0d9488                   /* bottom color */
   );
-  --glow: 0 8px 32px -8px hsla(158, 64%, 32%, 0.25);
-  --radius: 0.75rem;
+
+  --glow: 0 8px 32px -8px rgba(45, 212, 191, 0.35); /* soft shadow */
+  --radius: 12px;             /* rounded corners */
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background: var(--bg);
-  color: var(--fg);
+  font-family: "Inter", sans-serif; /* font style */
+  background: var(--bg);            /* page background */
+  color: var(--fg);                 /* text color */
 }
 
 /* HERO */
 
 .hero {
-  position: relative;
-  overflow: hidden;
+  position: relative;      /* base position */
+  overflow: hidden;        /* hide overflow */
 }
 
 .hero-bg {
-  position: absolute;
-  inset: 0;
-  background: var(--hero-gradient);
-  opacity: 0.95;
+  position: absolute;      /* layer behind */
+  inset: 0;                /* full cover */
+  background: var(--hero-gradient); /* gradient bg */
+  opacity: 0.95;           /* little transparent */
 }
 
 .hero-content {
-  position: relative;
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 6rem 1.5rem 8rem;
+  position: relative;      /* above bg */
+  max-width: 72rem;        /* content width */
+  margin: 0 auto;          /* center align */
+  padding: 6rem 1.5rem 8rem; /* space inside */
 }
 
 .hero-badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
+  display: inline-block;   /* fit content */
+  padding: 0.4rem 1rem;    /* inside space */
+  border-radius: 9999px;   /* pill shape */
+  background: rgba(255, 255, 255, 0.15); /* glass bg */
+  color: white;            /* text color */
+  font-size: 0.85rem;      /* small text */
+  margin-bottom: 1.5rem;   /* space below */
 }
 
 .hero h1 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(2rem, 5vw, 3.75rem);
-  font-weight: 800;
-  color: white;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-family: "Plus Jakarta Sans", sans-serif; /* heading font */
+  font-size: clamp(2rem, 5vw, 3.75rem); /* responsive size */
+  font-weight: 800;        /* very bold */
+  color: white;            /* white text */
+  line-height: 1.2;        /* line spacing */
+  margin-bottom: 1.5rem;   /* space below */
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 40rem;
+  font-size: 1.1rem;       /* paragraph size */
+  color: rgba(255, 255, 255, 0.85); /* soft white */
+  max-width: 40rem;        /* text width */
 }
 
 .hero-curve {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 5rem;
-  background: var(--bg);
-  clip-path: ellipse(55% 100% at 50% 100%);
+  position: absolute;      /* placed freely */
+  bottom: 0;               /* stick bottom */
+  left: 0;                 /* left edge */
+  right: 0;                /* right edge */
+  height: 5rem;            /* curve height */
+  background: var(--bg);   /* page color */
+  clip-path: ellipse(55% 100% at 50% 100%); /* curved shape */
 }
 
 /* STATS */
