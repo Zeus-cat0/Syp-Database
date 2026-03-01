@@ -82,6 +82,11 @@ nav a:hover {
     color: #011616;                  /* text color */
 }
 
+.chat-btn:hover {
+    background: #14b8a6;          /* slightly darker */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .account-btn {
     padding: 10px 24px;        /* space inside button */
     background: #2dd4bf;       /* button color */
@@ -91,6 +96,11 @@ nav a:hover {
     font-size: 14px;           /* text size */
     font-weight: 600;          /* semi bold text */
     margin-left: 15px;         /* space from left */
+}
+
+.account-btn:hover {
+    background: #14b8a6;          /* slightly darker */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 :root {                   /* setting of entire HTML page */
@@ -201,6 +211,12 @@ body {
   padding: 1.5rem;               /* inner space */
   text-align: center;            /* center text */
   box-shadow: var(--glow);       /* soft shadow */
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  background-color: #f0fdfa; /* very light teal */
+  box-shadow: 0 12px 28px rgba(45, 212, 191, 0.35);
 }
 
 .stat-card .value {
@@ -217,7 +233,7 @@ body {
 
 .section {
   max-width: 72rem;      /* max width */
-  margin: 0 auto;        /* center section */
+  margin: -3cm auto 0; /* moves section 3cm up from middle */  
   padding: 5rem 1.5rem; /* inner space */
 }
 
@@ -253,6 +269,12 @@ body {
   border-radius: var(--radius);         /* round corners */
   padding: 1.5rem;                     /* inside space */
   box-shadow: var(--glow);              /* soft shadow */
+  transition: transform 0.25s ease, background-color 0.25s ease; /* smooth */
+}
+
+.feature-card:hover {
+  transform: scale(1.04);       /* popup effect */
+  background-color: #f0fdfa;    /* very light cyan */
 }
 
 .feature-card h3 {
@@ -295,12 +317,26 @@ body {
 }
 
 .cta-btn {
-  margin-top: 1.5rem;       /* space top */
+  text-decoration: none; /* removes underline */
+  display: inline-block; /* inline + size control */
+  margin-top: 1.5rem;      /* move button down */
   padding: 0.8rem 2rem;     /* button size */
   border-radius: 9999px;    /* pill shape */
   border: none;             /* no border */
   font-weight: 600;         /* bold text */
   cursor: pointer;          /* hand cursor */
+
+  background: white;          /* default bg */
+  color: #0d9488;             /* text color */
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+/* HOVER EFFECT */
+.cta-btn:hover {
+  background: #ccfbf1;        
+  color: #0f172a;             /* darker text */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -427,7 +463,7 @@ body {
 /* FOOTER */
 
 .footer {
-  background: #0e2b23;   /* footer color */
+  background: #49907c;   /* footer color */
   padding: 3rem 1.5rem; /* inner space */
   color: white;         /* text color */
   text-align: center;   /* center text */
